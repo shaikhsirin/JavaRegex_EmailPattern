@@ -8,6 +8,7 @@ public class UserRegistration {
         //validationOf.validatePasswordRuleOne("sirin56@)+");
         System.out.println(validationOf.validatePasswordRuleTwo("sirAnhhjjhg"));
         System.out.println(validationOf.validatePasswordRuleThree("kirAnhhjj1hg"));
+        System.out.println(validationOf.validatePasswordRuleFour("sirA@2nhhjj21hg"));
     }
 
 }
