@@ -57,4 +57,11 @@ public class ValidationOfUserRegistration {
         String regex = "^[A-Za-z0-9.-_@#$%&^*()+:?]{8,}$";
         System.out.println(password.matches(regex));
     }
+    public void validatePassword(String password){
+
+    }
+    public boolean validatePasswordRuleTwo(String password){
+        String regex = "^(?=.*[A-Z])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
+        return (password.matches(regex));
+    }
 }

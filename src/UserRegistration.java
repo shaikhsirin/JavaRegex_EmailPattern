@@ -6,6 +6,7 @@ public class UserRegistration {
         validationOf.validateEmailId("sirinshaikh942@gmail.com");
         validationOf.validateMobileNumber("91 96998080895");
         validationOf.validatePasswordRuleOne("sirin56@)+");
+        System.out.println(validationOf.validatePasswordRuleTwo("sirAnhhjjhg"));
     }
 
 }
