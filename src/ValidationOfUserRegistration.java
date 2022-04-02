@@ -1,26 +1,31 @@
 import java.util.Scanner;
+
 /**
  * This class is for validation of User registration
  * Taking user input and checking whether data is in correct format
  */
 public class ValidationOfUserRegistration {
+    //Scanner class to take the input from the user
     Scanner scanner = new Scanner(System.in);
 
-    public void validateFirstName(String sirin) {
-        System.out.println("Enter the First Name");
-        String firstName = scanner.next();
+    /**
+     * this method is to check the first name whether its in correct format
+     * i.e; minimum 3 characters and first letter should be capital letter
+     *
+     * @param firstName
+     */
+    public void validateFirstName(String firstName) {
         String regex = "^[A-Z][a-z]{2,}$";
         System.out.println(firstName.matches(regex));
     }
 
     /**
-     * this method is to check whether the last name entered is correct ot not
+     * this method is to check whether the last name entered is correct
+     * i.e; minimum 3 characters and first should be in caps
      *
-     * @param shaikh
+     * @param lastName
      */
-    public void validateLastName(String shaikh) {
-        System.out.println("Enter the Last Name");
-        String lastName = scanner.next();
+    public void validateLastName(String lastName) {
         String regex = "^[A-Z][a-z]{2,}$";
         System.out.println(lastName.matches(regex));
 
@@ -29,17 +34,15 @@ public class ValidationOfUserRegistration {
     /**
      * this method is to check whether the emailId is in correct format
      *
-     * @param s
+     * @param emailId
      */
-    public void validateEmailId(String s) {
-        System.out.println("Enter the EmailId");
-        String emailId = scanner.next();
-        String regex = "^[A-Za-z0-9-._]{1,}+@+[a-z]{1,}+.+[a-z]$";
+    public void validateEmailId(String emailId) {
+        String regex = "^[A-Za-z0-9-+._]+@[a-z0-9]+(.[a-z]{2,3})+$";
         System.out.println(emailId.matches(regex));
     }
 
     /**
-     * this method is to validate Mobile number
+     * this method is to validate MobileNumber by country code space ten-digit number
      *
      * @param mobileNumber
      */
@@ -53,17 +56,16 @@ public class ValidationOfUserRegistration {
      *
      * @param password
      */
-    public void validatePasswordRuleOne(String password) {
+    public boolean validatePasswordRuleOne(String password) {
         String regex = "^[A-Za-z0-9.-_@#$%&^*()+:?]{8,}$";
-        System.out.println(password.matches(regex));
+        return (password.matches(regex));
     }
-    public void validatePassword(String password){
 
-    }
-    public boolean validatePasswordRuleTwo(String password){
+    public boolean validatePasswordRuleTwo(String password) {
         String regex = "^(?=.*[A-Z])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
         return (password.matches(regex));
     }
+
     public boolean validatePasswordRuleThree(String password) {
         String regex = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
         return (password.matches(regex));
