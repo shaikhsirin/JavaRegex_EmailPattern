@@ -3,6 +3,7 @@ public class UserRegistration {
         ValidationOfUserRegistration validationOf = new ValidationOfUserRegistration();
         validationOf.validateFirstName();
         validationOf.validateLastName();
+        validationOf.validateEmailId();
     }
 
 }
