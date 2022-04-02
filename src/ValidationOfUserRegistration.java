@@ -64,4 +64,8 @@ public class ValidationOfUserRegistration {
         String regex = "^(?=.*[A-Z])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
         return (password.matches(regex));
     }
+    public boolean validatePasswordRuleThree(String password) {
+        String regex = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9._@#$%&^*()+:?]{8,}$";
+        return (password.matches(regex));
+    }
 }
